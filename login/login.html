@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - OtakuEats</title>
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="login.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+  <div class="logo">
+    <a href="../index.html"><img src="../images/logo.png"></a>
+  </div>
+  <ul class="nav-menu">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../about/about.html">About</a></li>
+    <li><a href="login.html" class="active">Login</a></li>
+  </ul>
+</nav>
+
+<!-- Pending restaurant banner — only visible when coming from a restaurant click -->
+<div class="pending-banner" id="pendingBanner">
+  <span class="pending-icon">🍽️</span>
+  Login to visit <strong id="pendingLabel"></strong>
+  <button class="banner-close" id="bannerClose" title="Dismiss">&#10005;</button>
+</div>
+
+<div class="container">
+
+  <div class="left">
+    <div class="welcome-box">
+      <h2 id="typingText"></h2>
+    </div>
+    <img src="delivery.svg" class="delivery-img">
+    <p class="welcome-text">Login to continue your food journey</p>
+  </div>
+
+  <div class="right">
+    <div class="login-card">
+
+      <div class="card-logo">🍜</div>
+      <h2>Login</h2>
+
+      <div class="input-group">
+        <span class="input-icon"><i class="ri-mail-line"></i></span>
+        <input type="email" id="email" placeholder="Email" required autocomplete="email">
+      </div>
+
+      <div class="input-group password-box">
+        <span class="input-icon"><i class="ri-lock-line"></i></span>
+        <input type="password" id="password" placeholder="Password" required minlength="6">
+        <i class="ri-eye-line" id="toggle"></i>
+      </div>
+
+      <button id="loginBtn">
+        <span class="btn-text">Login</span>
+        <span class="btn-arrow">→</span>
+      </button>
+
+      <p class="welcome" id="welcomeMsg"></p>
+
+      <p class="signup">
+        Don't have an account? <a href="signup.html">Sign Up</a>
+      </p>
+
+    </div>
+  </div>
+
+</div>
+
+<script src="login.js"></script>
+</body>
+</html>
