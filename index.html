@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OtakuEats</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<nav>
+
+  <div class="logo">
+    <a href="index.html">
+      <img src="images/logo.png">
+    </a>
+  </div>
+
+  <ul class="nav-menu">
+    <li><a href="#" class="active">Home</a></li>
+    <li><a href="about/about.html">About</a></li>
+    <!-- Login link: hidden when logged in -->
+    <li id="navLoginLi"><a href="login/login.html">Login</a></li>
+  </ul>
+
+  <div class="nav-right">
+
+    <div class="search-wrapper">
+      <input type="text" class="search-bar" placeholder="Search restaurant..." id="searchInput" autocomplete="off">
+      <div class="search-dropdown" id="searchDropdown"></div>
+    </div>
+
+    <!-- Profile icon: shown only when logged in -->
+    <div class="profile-wrap" id="navProfileLi" style="display:none;">
+      <button class="profile-btn" id="profileBtn" title="Account">
+        <svg viewBox="0 0 24 24" fill="white" width="22" height="22">
+          <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+        </svg>
+        <span class="profile-name" id="profileEmail"></span>
+      </button>
+      <!-- Dropdown -->
+      <div class="profile-dropdown" id="profileDropdown">
+        <div class="profile-dropdown-header">
+          <span class="pd-icon">👤</span>
+          <span id="profileEmailFull"></span>
+        </div>
+        <hr class="pd-divider">
+        <button class="pd-logout" id="logoutBtn">
+          <span>⏻</span> Log Out
+        </button>
+      </div>
+    </div>
+
+    <div class="fav-icon" id="favIcon" title="View Favourites">
+      <svg viewBox="0 0 24 24">
+        <path fill="white" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+          2 5.42 4.42 3 7.5 3
+          9.24 3 10.91 3.81 12 5.09
+          13.09 3.81 14.76 3 16.5 3
+          19.58 3 22 5.42 22 8.5
+          22 12.28 18.6 15.36 13.45 20.04
+          L12 21.35z"/>
+      </svg>
+      <span class="fav-badge" id="favBadge">0</span>
+    </div>
+
+  </div>
+
+</nav>
+
+
+
+<section class="hero">
+
+  <div class="hero-text">
+
+    <h1>
+      Taste the <span>Difference</span>,<br>
+      Taste the <span>Good Life</span>
+    </h1>
+
+    <button id="exploreBtn">Explore Restaurants</button>
+
+  </div>
+
+</section>
+
+
+
+
+<section class="menu-section">
+
+  <h2>Our Popular <span>Restaurants</span></h2>
+
+  <div class="carousel">
+
+    <button class="nav prev">&#10094;</button>
+
+    <div class="carousel-track">
+
+      <div class="item" data-name="Murugan Idli Shop">
+        <div class="item-img-wrap">
+          <img src="images/murgan.jpg">
+          <button class="fav-btn" title="Add to Favourites">&#9829;</button>
+        </div>
+        <h3>Murugan Idli Shop</h3>
+      </div>
+
+      <div class="item" data-name="Annalakshmi">
+        <div class="item-img-wrap">
+          <img src="images/annalakshmi.jpg">
+          <button class="fav-btn" title="Add to Favourites">&#9829;</button>
+        </div>
+        <h3>Annalakshmi</h3>
+      </div>
+
+      <div class="item" data-name="Barbeque Nation">
+        <div class="item-img-wrap">
+          <img src="images/barbeque.jpg">
+          <button class="fav-btn" title="Add to Favourites">&#9829;</button>
+        </div>
+        <h3>Barbeque Nation</h3>
+      </div>
+
+      <div class="item" data-name="Absolute Barbeques">
+        <div class="item-img-wrap">
+          <img src="images/absolute.jpg">
+          <button class="fav-btn" title="Add to Favourites">&#9829;</button>
+        </div>
+        <h3>Absolute Barbeques</h3>
+      </div>
+
+      <div class="item" data-name="The Marina">
+        <div class="item-img-wrap">
+          <img src="images/the_marina.jpg">
+          <button class="fav-btn" title="Add to Favourites">&#9829;</button>
+        </div>
+        <h3>The Marina</h3>
+      </div>
+
+      <div class="item" data-name="A2B - Adyar Ananda Bhavan">
+        <div class="item-img-wrap">
+          <img src="images/a2b.jpg">
+          <button class="fav-btn" title="Add to Favourites">&#9829;</button>
+        </div>
+        <h3>A2B - Adyar Ananda Bhavan</h3>
+      </div>
+
+      <div class="item" data-name="The Flying Elephant">
+        <div class="item-img-wrap">
+          <img src="images/flying.jpg">
+          <button class="fav-btn" title="Add to Favourites">&#9829;</button>
+        </div>
+        <h3>The Flying Elephant</h3>
+      </div>
+
+      <div class="item" data-name="Ponnusamy Hotel">
+        <div class="item-img-wrap">
+          <img src="images/ponnusamy.jpg">
+          <button class="fav-btn" title="Add to Favourites">&#9829;</button>
+        </div>
+        <h3>Ponnusamy Hotel</h3>
+      </div>
+
+      <div class="item" data-name="Saravana Bhavan">
+        <div class="item-img-wrap">
+          <img src="images/saravana.jpg">
+          <button class="fav-btn" title="Add to Favourites">&#9829;</button>
+        </div>
+        <h3>Saravana Bhavan</h3>
+      </div>
+
+      <div class="item" data-name="Dakshin">
+        <div class="item-img-wrap">
+          <img src="images/dakshin.jpg">
+          <button class="fav-btn" title="Add to Favourites">&#9829;</button>
+        </div>
+        <h3>Dakshin</h3>
+      </div>
+
+    </div>
+
+    <button class="nav next">&#10095;</button>
+
+  </div>
+
+  <div class="carousel-info" id="carouselInfo">
+    <p class="carousel-cuisine-label" id="carouselCuisineLabel"></p>
+    <div class="carousel-stars" id="carouselStars"></div>
+  </div>
+
+  <div class="carousel-dots" id="carouselDots"></div>
+
+  <div class="carousel-view-all">
+    <button id="viewAllBtn">View All Restaurants &rarr;</button>
+  </div>
+
+</section>
+
+
+<footer class="site-footer">
+  Made with <span class="footer-heart">&#9829;</span> by Rahul &nbsp;|&nbsp; OtakuEats &copy; 2026
+</footer>
+
+
+<!-- EXPLORE MODAL -->
+<div class="modal-overlay" id="exploreModal">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h2>All <span>Restaurants</span></h2>
+      <button class="modal-close" id="closeExplore">&times;</button>
+    </div>
+    <div class="modal-grid" id="exploreGrid"></div>
+  </div>
+</div>
+
+
+<!-- FAVOURITES MODAL -->
+<div class="modal-overlay" id="favModal">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h2>My <span>Favourites</span></h2>
+      <button class="modal-close" id="closeFav">&times;</button>
+    </div>
+    <div class="modal-grid" id="favGrid"></div>
+    <p class="empty-fav" id="emptyFav">No favourites added yet. Hover over a restaurant and tap ♥ to add!</p>
+  </div>
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
